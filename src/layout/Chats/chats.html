@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../assets/styles/grid-layout.css">
+  <link rel="stylesheet" href="chats.css">
+  <link rel="stylesheet" href="../CurrentChat/current-chat.css">
+  <link rel="stylesheet" href="../../assets/styles/forms.css">
+  <link rel="stylesheet" href="../../assets/styles/avatar.css">
+  <link rel="stylesheet" href="../../assets/styles/contact.css">
+  <link rel="stylesheet" href="../../assets/styles/inputs.css">
+</head>
+<body>
+
+<div class="grid">
+  <header class="sidebar__header chats__header">
+    {{> avatar-header name="DK" }}
+    <form class="search-form" name="search_form">
+      <label class="search-input__label" for="search">
+        <button class="search-input__submit" type="submit">
+          <svg class="search-input__icon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+            <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109
+          0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75
+          0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"/>
+          </svg>
+        </button>
+        <input class="search-input__input" name="search" id="search" type="text" placeholder="Search"/>
+      </label>
+    </form>
+  </header>
+
+  <aside class="sidebar__body chats__list">
+    {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+
+    <div class="contact contact_selected">
+      <div class="avatar avatar_empty"><p>IN</p></div>
+      <div class="contact__body">
+        <div class="contact__info">
+          <h6 class="contact__name">Irina N.</h6>
+          <p class="contact__last-visit">15:42</p>
+        </div>
+        <div class="contact__messages">
+          <p class="contact__last-message contact__last-message_selected trim-text">Hang tight, the squirrels are still typing</p>
+          <p class="contact__unread-counter">5</p>
+        </div>
+      </div>
+    </div>
+    <ul>
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+      {{> contact avatar="IN" name="Irina N." time="15:24" message="Hang tight, the squirrels are still typing" count="5" }}
+    </ul>
+  </aside>
+
+  <header class="main__header">
+  </header>
+
+  <main class="main__body">
+  </main>
+</div>
+
+
+</body>
+</html>

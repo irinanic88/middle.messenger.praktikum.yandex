@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current chat</title>
+  <link rel="stylesheet" href="../../assets/styles/grid-layout.css">
+  <link rel="stylesheet" href="../Chats/chats.css">
+  <link rel="stylesheet" href="current-chat.css">
+  <link rel="stylesheet" href="../../assets/styles/forms.css">
+  <link rel="stylesheet" href="../../assets/styles/avatar.css">
+  <link rel="stylesheet" href="../../assets/styles/contact.css">
+  <link rel="stylesheet" href="../../assets/styles/inputs.css">
+</head>
+<body>
+<div class="grid">
+  <header class="sidebar__header">
+  </header>
+
+  <aside class="sidebar__body">
+  </aside>
+
+  <header class="main__header current-chat__header">
+    <div class="contact">
+      {{> avatar-header name="IN" }}
+      <div class="contact__body">
+        <div class="contact__info">
+          <h6 class="contact__name">Irina N.</h6>
+        </div>
+        <div class="contact__messages">
+          <p class="contact__status trim-text">Let's talk about squirrels</p>
+        </div>
+      </div>
+    </div>
+
+    <ul class="current-chat__actions">
+      <li class="icon-placeholder"></li>
+      <li class="icon-placeholder"></li>
+      <li class="icon-placeholder"></li>
+    </ul>
+  </header>
+
+  <main class="main__body current-chat__body">
+    <div class="current-chat__messages">
+      Messages Placeholder
+    </div>
+    <form class="message-form" name="message_form">
+      <label class="textarea__label" for="message">
+        <div class="icon-placeholder"></div>
+        <textarea class="textarea__input" rows="1" id="message" name="message"></textarea>
+        <ul class="message-form__actions">
+          <li class="icon-placeholder"></li>
+          <li class="icon-placeholder"></li>
+        </ul>
+      </label>
+    </form>
+  </main>
+</div>
+</body>
+</html>

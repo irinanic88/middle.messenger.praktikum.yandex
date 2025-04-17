@@ -1,0 +1,71 @@
+@import "/index.css";
+
+.profile__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px 8px 20px;
+}
+
+.profile__header-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.profile__body {
+    grid-row: 2;
+    grid-column: 1;
+    max-height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+    gap: 8px;
+    border-right: 1px solid var(--font-secondary);
+}
+
+.profile__main {
+    position: relative;
+}
+
+.profile__picture {
+    width: 100%;
+    height: 320px;
+}
+
+.profile__default-img {
+    height: 100%;
+    background-color: rgba(228, 237, 253, 1);
+}
+
+.profile__current {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+}
+
+.profile__name {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(55, 65, 81, 1);
+    line-height: 24px;
+    margin-bottom: 4px;
+}
+
+.profile__last-visit {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(107, 114, 128, 1);
+}
+
+.profile__info {
+    margin-top: 16px;
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+

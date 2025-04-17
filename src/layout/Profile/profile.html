@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile</title>
+  <link rel="stylesheet" href="../../assets/styles/grid-layout.css">
+  <link rel="stylesheet" href="profile.css">
+  <link rel="stylesheet" href="../../assets/styles/info-block.css">
+  <link rel="stylesheet" href="../../assets/styles/inputs.css">
+  <link rel="stylesheet" href="../../assets/styles/button.css">
+  <link rel="stylesheet" href="../../assets/styles/forms.css">
+  <link rel="stylesheet" href="../../assets/styles/avatar.css">
+</head>
+<body>
+
+<div class="grid">
+  <header class="sidebar__header profile__header">
+    <div class="profile__header-title">
+      {{> avatar-header name="DK" }}
+      {{> title text="Profile" }}
+    </div>
+    {{> button-secondary name="Edit" }}
+  </header>
+
+  <aside class="sidebar__body profile__body">
+    <div class="profile__main">
+      <div class="profile__picture">
+        <div class="profile__default-img"></div>
+      </div>
+      <div class="profile__current">
+        <p class="profile__name">Daria</p>
+        <p class="profile__last-visit">last seen 1 hour ago</p>
+      </div>
+    </div>
+    <ul class="profile__info">
+      {{> info-block main="+34 999 999 999" assistive="Phone" }}
+      {{> info-block main="daria@daria.com" assistive="Email" }}
+      {{> info-block main="@daria" assistive="Username" }}
+    </ul>
+  </aside>
+
+  <header class="main__header">
+  </header>
+
+  <main class="main__body">
+  </main>
+</div>
+</body>
+</html>
