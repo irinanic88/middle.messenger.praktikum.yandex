@@ -1,0 +1,27 @@
+@import "/index.css";
+
+.button {
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:disabled {
+        opacity: .2;
+    }
+}
+
+.button_primary {
+    padding: 9px 16px;
+    background-color: var(--secondary);
+    color: var(--font-tertiary);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button_secondary {
+    background-color: transparent;
+    border: none;
+    color: var(--secondary);
+    font-size: 12px;
+}
