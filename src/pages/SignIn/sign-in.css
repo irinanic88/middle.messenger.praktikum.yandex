@@ -1,0 +1,14 @@
+@import "/index.css";
+
+.sign-in__container {
+    margin: 0 auto;
+    width: 320px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sign-in__title {
+    margin-bottom: 48px;
+}

@@ -1,0 +1,21 @@
+@import "/index.css";
+
+.current-chat__header {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.current-chat__actions {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+.current-chat__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
