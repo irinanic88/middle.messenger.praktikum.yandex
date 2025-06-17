@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="profile.css">
   <link rel="stylesheet" href="../../assets/styles/info-block.css">
   <link rel="stylesheet" href="../../assets/styles/inputs.css">
-  <link rel="stylesheet" href="../../assets/styles/button.css">
+  <link rel="stylesheet" href="../../components/Button/Button.css">
   <link rel="stylesheet" href="../../assets/styles/forms.css">
   <link rel="stylesheet" href="../../assets/styles/avatar.css">
 </head>
@@ -34,17 +34,17 @@
       </div>
     </div>
     <ul class="profile__info">
-      {{> info-block main="+34 999 999 999" assistive="Phone" }}
-      {{> info-block main="daria@daria.com" assistive="Email" }}
-      {{> info-block main="@daria" assistive="Username" }}
+      {{> info-block app="+34 999 999 999" assistive="Phone" }}
+      {{> info-block app="daria@daria.com" assistive="Email" }}
+      {{> info-block app="@daria" assistive="Username" }}
     </ul>
   </aside>
 
   <header class="main__header">
   </header>
 
-  <main class="main__body">
-  </main>
+  <app class="main__body">
+  </app>
 </div>
 </body>
 </html>

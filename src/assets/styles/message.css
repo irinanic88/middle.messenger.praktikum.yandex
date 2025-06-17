@@ -1,0 +1,23 @@
+@import "/index.css";
+
+.message {
+    padding: 16px 32px;
+    color: var(--font-primary)
+}
+
+.message_user {
+    align-self: flex-end;
+    background-color: var(--font-tertiary);
+    border: 1px solid var(--secondary);
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+
+}
+
+.message_contact {
+    align-self: flex-start;
+    background-color:  var(--light-grey);
+    border: 1px solid var(--font-tertiary);
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+}

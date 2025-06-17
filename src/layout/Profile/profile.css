@@ -35,7 +35,7 @@
 
 .profile__default-img {
     height: 100%;
-    background-color: rgba(228, 237, 253, 1);
+    background-color: var(--background-default);
 }
 
 .profile__current {

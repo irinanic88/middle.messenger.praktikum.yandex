@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../../assets/styles/avatar.css">
   <link rel="stylesheet" href="../../assets/styles/contact.css">
   <link rel="stylesheet" href="../../assets/styles/inputs.css">
+  <link rel="stylesheet" href="../../assets/styles/message.css">
 </head>
 <body>
 <div class="grid">
@@ -40,10 +41,36 @@
     </ul>
   </header>
 
-  <main class="main__body current-chat__body">
-    <div class="current-chat__messages">
-      Messages Placeholder
-    </div>
+  <app class="main__body current-chat__body">
+    <ul class="current-chat__messages">
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> user-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+      {{> contact-message text="I saw a squirrel stealing my sandwich today 😳" }}
+    </ul>
     <form class="message-form" name="message_form">
       <label class="textarea__label" for="message">
         <div class="icon-placeholder"></div>
@@ -54,7 +81,7 @@
         </ul>
       </label>
     </form>
-  </main>
+  </app>
 </div>
 </body>
 </html>
