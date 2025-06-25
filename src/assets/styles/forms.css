@@ -38,16 +38,5 @@
     list-style: none;
 }
 
-.sign-in-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.sign-up-form {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
 
 

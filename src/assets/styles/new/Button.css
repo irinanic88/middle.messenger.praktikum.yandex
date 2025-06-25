@@ -1,0 +1,18 @@
+@import "./index.css";
+
+.button {
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 16px;
+    background-color: var(--primary);
+    padding: 6px 12px;
+    border: 2px solid transparent;
+}
+
+.button:hover {
+    border: 2px solid var(--secondary);
+}
+
+.button:active {
+    transform: translateY(1px);
+}

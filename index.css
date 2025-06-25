@@ -1,11 +1,9 @@
 :root {
-    --primary: #3369F3;
-    --secondary: #A2BAF7;
+    --primary: #FFFFFF;
+    --secondary: #000000;
+    --tertiary: #D9D9D9;
     --font-primary: #000000;
-    --font-secondary: #DADCE0;
-    --font-tertiary: #FFFFFF;
-    --font-messages: #8E8E92;
-    --light-grey: #D9D9D9;
+    --font-secondary: #D9D9D9;
 }
 
 
@@ -15,48 +13,14 @@ html, body, h1, h2, h3, h4, h5, h6, p, div, span, * {
     margin: 0;
 }
 
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: var(--font-primary);
-}
-
-.main__links {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    list-style: none;
-}
-
 .trim-text {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.icon-placeholder {
-    width: 24px;
-    height: 24px;
-    background-color: var(--primary);
-}
 
-.icon-placeholder_selected {
-    background-color: var(--font-tertiary);
-}
 
-.title {
-    font-size: 16px;
-    font-weight: 600;
-}
 
-.auth {
-    margin-top: 48px;
-    align-self: center;
-}
 
-.auth__link {
-    text-transform: uppercase;
-    color: var(--font-primary);
-}
+

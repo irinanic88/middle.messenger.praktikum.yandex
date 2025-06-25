@@ -1,20 +1,6 @@
 @import "/index.css";
 
-.input__label {
-    font-size: 14px;
-    font-weight: 500;
-    color: rgba(55, 65, 81, 1);
-}
 
-.required {
-    &::after {
-         content: '*';
-         display: inline-block;
-         margin-left: 3px;
-         color: red;
-         text-decoration: none;
-     }
-}
 
 .input-hidden {
     visibility: hidden;
@@ -26,63 +12,9 @@
     opacity: 0;
 }
 
-.text-input {
-    display: flex;
-    flex-direction: column;
-    gap: 8px
-}
 
-.text-input__input {
-    padding: 9px 16px;
-    border-radius: 8px;
-    border: 1px solid var(--font-secondary);
 
-    &:focus {
-        outline: none;
-    }
-}
 
-.text-input__additional-text {
-    font-size: 12px;
-    font-weight: 500;
-    color: rgba(107, 114, 128, 1);
-}
-
-.checkbox-input {
-    position: relative;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-}
-
-.checkbox-input__input {
-    position: relative;
-    margin-right: 8px;
-    width: 12px;
-    height: 12px;
-    border-radius: 3px;
-    border: 1px solid var(--font-secondary);
-    outline: none;
-}
-
-.checkbox-input__icon {
-    display: none;
-}
-
-.input-hidden:checked + .checkbox-input__input {
-    background-color: var(--primary);
-    border: 1px solid var(--primary);
-}
-
-.input-hidden:checked + .checkbox-input__input .checkbox-input__icon {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    fill: var(--font-tertiary);
-}
 
 .upload-picture__input {
     visibility: hidden;

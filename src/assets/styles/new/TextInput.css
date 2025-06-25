@@ -1,0 +1,37 @@
+@import "./index.css";
+
+.text-input {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.text-input__label {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(55, 65, 81, 1);
+}
+
+.required {
+    &::after {
+        content: '*';
+        display: inline-block;
+        margin-left: 3px;
+        color: red;
+        text-decoration: none;
+    }
+}
+
+.text-input__input {
+    padding: 6px 12px;
+    border: 2px solid var(--secondary);
+}
+
+.text-input__input:not(:placeholder-shown) {
+    border: 2px solid transparent;
+}
+
+.text-input__input:focus {
+    outline: none;
+    border: 2px solid var(--tertiary);
+}

@@ -14,16 +14,6 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
-        signIn: resolve(__dirname, 'src/pages/SignIn/sign-in.html'),
-        signUp: resolve(__dirname, 'src/pages/SignUp/sign-up.html'),
-        chats: resolve(__dirname, 'src/layout/Chats/chats.html'),
-        profile: resolve(__dirname, 'src/layout/Profile/profile.html'),
-        editProfile: resolve(__dirname, 'src/layout/EditProfile/edit-profile.html'),
-        currentChat: resolve(__dirname, 'src/layout/CurrentChat/current-chat.html'),
-        changePassword: resolve(__dirname, 'src/dialogs/ChangePasswordDialog/change-password-dialog.html'),
-        deleteProfile: resolve(__dirname, 'src/dialogs/DeleteProfileDialog/delete-profile-dialog.html'),
-        pageNotFound: resolve(__dirname, 'src/error-pages/PageNotFound/page-not-found.html'),
-        serverError: resolve(__dirname, 'src/error-pages/ServerError/server-error.html'),
       }
     }
   },

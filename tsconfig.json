@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "es2017",
+    "lib": ["es2017", "dom"],
+    "declaration": false,
+    "module": "commonjs",
+    "strictNullChecks": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+  },
+  "include": ["src", "types.d.ts"]
+}
