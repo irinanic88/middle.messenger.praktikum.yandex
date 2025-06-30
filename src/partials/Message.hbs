@@ -1,4 +1,9 @@
 <li class="message{{#if owner}} message__chat-owner{{/if}}{{#if contact}} message__contact{{/if}}">
-  {{> Avatar src=avatar altText="user-avatar" classes="avatar__chat"}}
-  <p>{{text}}</p>
+  {{#if owner}}
+    <p>{{text}}</p>
+    {{> Avatar src=avatar altText="user-avatar" classes="avatar__chat"}}
+  {{else}}
+    {{> Avatar src=avatar altText="user-avatar" classes="avatar__chat"}}
+    <p>{{text}}</p>
+  {{/if}}
 </li>

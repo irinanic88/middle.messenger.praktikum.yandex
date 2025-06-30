@@ -1,4 +1,4 @@
-<button class="button{{#if icon}} button__icon{{/if}}">
+<button class="button{{#if icon}} button__icon{{/if}}{{#if class}} {{class}}{{/if}}">
   {{#if icon}}<img src="{{icon}}" alt="button"/>{{/if}}
   {{#if title}}{{title}}{{/if}}
 </button>

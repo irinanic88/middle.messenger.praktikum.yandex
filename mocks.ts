@@ -1,58 +1,226 @@
-import { faker } from '@faker-js/faker';
+import { v4 as uuid } from 'uuid';
 
-
-type Message = {
-  messageId: string;
-  senderId: string;
-  text: string;
-  timestamp: string;
+export const userMock = {
+  id: 'main-user-id',
+  avatar: '/icons/cat_icon_1.png',
+  name: 'Игорь',
+  surname: 'Весёлкин',
+  userName: 'funny_igor_007',
+  email: 'igor.veselkin@example.com',
+  phone: '+7 (999) 123-45-67',
 };
 
-
-export function generateContacts(count = 5) {
-  const possibleTags = ['literature', 'philosophy', 'technology', 'science', 'art', 'music'];
-
-  const contacts: {
-    avatar: string;
-    chatName:string;
-    name: string;
-    userName: string;
-    tags: string[],
-  }[] = [];
-
-  for (let i = 0; i < count; i++) {
-    const tagsCount = faker.number.int({ min: 1, max: 3 });
-    const tags = faker.helpers.uniqueArray(possibleTags, tagsCount);
-
-    contacts.push({
-      avatar: '/icons/cat_icon_2.png',
-      chatName: faker.company.catchPhrase(),
-      name: faker.person.fullName(),
-      userName: faker.internet.userName(),
-      tags: tags,
-    });
+export const contactsMock = [
+  {
+    chatId: 'chat-1a2b3c4d-0001',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Гении продуктивности',
+    name: 'Михаил Гиперответственный',
+    userName: 'workaholic_mike',
+    tags: ['работа', 'душнила'],
+  },
+  {
+    chatId: 'chat-1a2b3c4d-0002',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Мемологи-аналитики',
+    name: 'Анастасия Ржунемогу',
+    userName: 'memer_nastia',
+    tags: ['поржать'],
+  },
+  {
+    chatId: 'chat-1a2b3c4d-0003',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Семейная опера',
+    name: 'Тётя Галя',
+    userName: 'aunt_galya',
+    tags: ['семья'],
+  },
+  {
+    chatId: 'chat-1a2b3c4d-0004',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Свиданки и булочки',
+    name: 'Серёжа Романтик',
+    userName: 'tinder_serge',
+    tags: ['тиндер'],
+  },
+  {
+    chatId: 'chat-1a2b3c4d-0005',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Разбор полётов',
+    name: 'Влад Занудов',
+    userName: 'vladislav_zzz',
+    tags: ['душнила', 'работа'],
+  },
+  {
+    chatId: 'chat-1a2b3c4d-0006',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Хто ты вообще?',
+    name: 'Таинственный Хомяк',
+    userName: 'unknown_hamster',
+    tags: ['кто_это'],
+  },
+  {
+    chatId: 'chat-1a2b3c4d-0007',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Юмор из 2007',
+    name: 'Славик Шутканул',
+    userName: 'slavik_mem',
+    tags: ['поржать', 'семья'],
+  },
+  {
+    chatId: 'chat-1a2b3c4d-0008',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Котики и дедлайны',
+    name: 'Катя ВсёУспею',
+    userName: 'katya_rush',
+    tags: ['работа', 'семья'],
   }
+];
 
-  return contacts;
+
+export function generateMessages(contact: { chatId: string }) {
+  const messages = [
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Привет! Ты слышал, что коты тайно управляют интернетом?",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Ну конечно, у меня дома целый штаб хвостатых агентов!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Ха-ха, представляешь, если они начнут диктовать нам правила? 'Все должны спать по 18 часов!'",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Ага, и обязательный режим ласк и кормежек по первому требованию!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Вот так и живём, в эпоху кошачьей диктатуры.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Кстати, ты видел, как они на тебя смотрят, будто читают мысли?",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "О, да! Иногда кажется, что они понимают меня лучше, чем люди.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Пожалуй, стоит присмотреться к этому внимательнее.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Ха, а что если они тайно записывают наши разговоры?",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Тогда у меня есть секрет — я не очень люблю брокколи.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Не волнуйся, я тоже держу это в тайне.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Уф, хорошо, что у нас есть общий язык — кошачий, конечно!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Согласен! В следующий раз надо пригласить их на чай.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Только чтобы угощение было вкусным — у кошек ведь изысканный вкус.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Точно! А еще лучше — мышиные печенья!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "О, это будет хит сезона!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Главное, чтобы никто из них не забыл выключить лазерную указку.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Ха-ха, лазерный бой — любимое развлечение!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: 'main-user-id',
+      avatar: '/icons/cat_icon_1.png',
+      text: "Ну что, договорились — устроим кошачью вечеринку?",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Договорились! Приглашай всех пушистиков.",
+    },
+  ];
+
+  return messages;
 }
-
-export function generateMessages(count = 20) {
-  const senderAvatars: Record<string, string> = {
-    u1: '/icons/cat_icon_1.png',
-    u2: '/icons/cat_icon_2.png',
-  };
-
-  const senderIds = ['u1', 'u2'];
-
-  return Array.from({ length: count }).map((_, index) => {
-    const senderId = senderIds[index % 2];
-    return {
-      messageId: `m${String(index + 1).padStart(3, '0')}`,
-      senderId,
-      avatar: senderAvatars[senderId],
-      text: faker.lorem.sentence(),
-    };
-  });
-}
-
-

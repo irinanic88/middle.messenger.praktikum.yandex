@@ -1,9 +1,26 @@
 .contact {
     display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
     gap: 8px;
     border-bottom: 2px solid var(--tertiary);
-    padding: 12px 0 12px 12px;
+    padding: 12px;
     font-size: 14px;
+}
+
+.contact__aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact__aside button {
+    padding: 0;
+}
+
+.contact__aside button img {
+    width: 20px;
+    height: 20px;
 }
 
 .contact__title {
@@ -41,4 +58,8 @@
 .contact__tag:hover {
     border-bottom: 1px solid var(--secondary);
     cursor: pointer;
+}
+
+.contact:hover .button_contact {
+    transform: translateX(2px);
 }

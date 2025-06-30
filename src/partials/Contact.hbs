@@ -1,5 +1,4 @@
 <li class="contact">
-  {{> Avatar src=avatar altText="contact-avatar" classes="avatar__contact"}}
   <div class="contact__body">
     <p class="contact__chatName"><span class="contact__title">Chat: </span>{{chatName}}</p>
     <p class="contact__name"><span class="contact__title">With: </span>{{name}}</p>
@@ -11,5 +10,13 @@
         </button>
       {{/each}}
     </div>
+  </div>
+  <div class="contact__aside">
+    {{> Avatar src=avatar altText="contact-avatar" classes="avatar__contact"}}
+    {{#if selected}}
+      {{> Button icon="/icons/arrow_icon.png" class="button_contact button_contact__selected" }}
+    {{else}}
+      {{> Button icon="/icons/arrow_icon.png" class="button_contact" }}
+    {{/if}}
   </div>
 </li>

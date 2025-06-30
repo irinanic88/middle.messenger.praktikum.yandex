@@ -1,5 +1,3 @@
-@import "/index.css";
-
 .grid {
     height: 100vh;
     min-height: 0;
@@ -33,7 +31,7 @@
 }
 
 .main__header {
-
+    border-bottom: var(--border-common);
 }
 
 .main__body {

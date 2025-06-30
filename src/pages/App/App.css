@@ -1,9 +1,7 @@
-@import "index.css";
-
 .app__tabs {
     margin: 250px auto;
     height: fit-content;
     width: fit-content;
-    padding: 48px 64px;
+    padding: 36px 48px;
     border: var(--border-common);
 }

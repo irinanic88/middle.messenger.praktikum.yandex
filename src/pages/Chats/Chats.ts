@@ -15,7 +15,7 @@ import '../../assets/styles/new/TextInput.css';
 import '../../assets/styles/new/Contact.css';
 import '../../components/Chat/Chat.css';
 
-import {generateContacts} from "../../../mocks";
+import {contactsMock, userMock} from "../../../mocks";
 import {Chat} from "../../components/Chat/Chat";
 
 Handlebars.registerPartial('Avatar', AvatarTemplate);
@@ -28,22 +28,27 @@ const template = `
     <header class="sidebar__header chats__header">
       {{> Avatar src="/icons/cat_icon_1.png" altText="profile-avatar" classes="avatar__profile"}}
       <div class="chats__profile">
-      <div>
-        <span class="chats__name">{{name}}</span>
-        <span class="chats__user-name">{{userName}}</span>
-      </div>
-        {{> Button title="Profile Info"}}
+        <p class="chats__name">{{name}} {{surname}}</p>
+        <p class="chats__user-name">{{userName}}</p>
+        {{> Button title="Profile Info" class="button_secondary chats__profile-btn"}}
       </div>
     </header>
 
     <aside class="sidebar__body chats__list">
       <div class="chats__search">
-        {{> TextInput id="search" type="text" required='false' placeholder="Search by #tag or @username"}}
+        {{> TextInput id="search" type="text" required='false' placeholder="Search by #tag or @username" fullWidth="true"}}
         {{> Button icon="/icons/search_icon.png" }}
       </div>
       <ul>
       {{#each contacts}}
-        {{> Contact avatar=avatar name=name chatName=chatName userName=userName tags=tags }}
+        {{> Contact 
+        avatar=avatar 
+        name=name 
+        chatName=chatName 
+        userName=userName 
+        tags=tags 
+        selected=(eq chatId ../selectedChat)
+        }}
       {{/each}}
       </ul>
     </aside>
@@ -57,9 +62,13 @@ class Chats extends Block {
   constructor(props) {
     super({
       ...props,
+      name: props.user.name,
+      surname: props.user.surname,
+      userName: props.user.userName,
+      selectedChat: props.contacts[0].chatId,
       CurrentChat: new Chat({
-        contact: props.contacts[0],
-        userName: props.name,
+        contactId: props.contacts[0].chatId,
+        user: props.user,
       })
     });
   }
@@ -68,7 +77,7 @@ class Chats extends Block {
     return template;
   }
 }
-const chats = new Chats({name: "Irina", userName: '@chat_owner', contacts: generateContacts(16)});
+const chats = new Chats({user: userMock, contacts: contactsMock});
 
 render('#chats', chats);
 

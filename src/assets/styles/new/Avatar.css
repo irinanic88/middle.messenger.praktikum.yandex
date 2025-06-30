@@ -2,15 +2,10 @@
     width: 48px;
     height: 48px;
     background-color: var(--primary);
-    border: var(--border-empty);
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.avatar:hover {
-    border: var(--border-common);
 }
 
 .avatar img {
@@ -23,15 +18,6 @@
 .avatar__profile {
     width: 60px;
     height: 60px;
-}
-
-.avatar__contact {
-    border-radius: 50%;
-}
-
-.avatar__chat {
-    border: var(--border-common);
-    border-radius: 50%;
 }
 
 .avatar__chat img {

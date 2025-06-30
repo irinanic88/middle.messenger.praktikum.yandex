@@ -1,14 +1,13 @@
-@import "./index.css";
-
 .text-input {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 8px;
 }
 
 .text-input__label {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 600;
     color: rgba(55, 65, 81, 1);
 }
@@ -24,7 +23,6 @@
 }
 
 .text-input__input {
-    width: 100%;
     padding: 6px 12px;
     border: var(--border-common);
 }
@@ -36,4 +34,8 @@
 .text-input__input:focus {
     outline: none;
     border: 2px solid var(--tertiary);
+}
+
+.text-input__input.full-width {
+    width: 100%;
 }

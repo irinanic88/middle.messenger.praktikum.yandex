@@ -5,7 +5,7 @@ import TextInputTemplate from '../../partials/TextInput.hbs?raw';
 import ButtonTemplate from '../../partials/Button.hbs?raw';
 import Block from "../../core/Block";
 import Handlebars from 'handlebars';
-import '../../assets/styles/new/Tabs.css';
+import './Tabs.css';
 import '../../assets/styles/new/Form.css';
 import '../../assets/styles/new/TextInput.css';
 import '../../assets/styles/new/Button.css';

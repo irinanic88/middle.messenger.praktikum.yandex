@@ -1,11 +1,8 @@
-@import "./index.css";
-
 .button {
     display: inline-flex;
     height: 33px;
     width: fit-content;
     text-transform: uppercase;
-    font-size: 16px;
     background-color: var(--primary);
     padding: 6px 12px;
     border: var(--border-empty);
@@ -17,5 +14,24 @@
 
 .button:active {
     transform: translateY(1px);
+}
+
+.button_contact:hover {
+    border: var(--border-empty);
+}
+
+.button_contact__selected {
+    display: none;
+}
+
+.button_secondary {
+    padding: 0;
+    border: none;
+    height: auto;
+}
+
+.button_secondary:hover {
+    border: none;
+    color: var(--tertiary);
 }
 

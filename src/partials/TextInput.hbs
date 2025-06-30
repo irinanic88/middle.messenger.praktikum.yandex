@@ -2,5 +2,11 @@
   {{#if label}}
     <label class="input__label {{#if required}}required{{/if}}" for="{{id}}">{{ label }}</label>
   {{/if}}
-  <input class="text-input__input" name="{{id}}" id="{{id}}" type={{type}} placeholder="{{placeholder}}"/>
+  <input
+      class="text-input__input{{#if fullWidth}} full-width{{/if}}"
+      name="{{id}}"
+      id="{{id}}"
+      type={{type}}
+      placeholder="{{placeholder}}"
+  />
 </div>
