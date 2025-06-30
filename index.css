@@ -4,6 +4,9 @@
     --tertiary: #D9D9D9;
     --font-primary: #000000;
     --font-secondary: #D9D9D9;
+    --border-common: 2px solid var(--secondary);
+    --border-empty: 2px solid transparent;
+    --common-padding: 16px;
 }
 
 

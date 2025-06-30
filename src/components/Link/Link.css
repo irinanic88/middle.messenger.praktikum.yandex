@@ -6,19 +6,19 @@
     font-size: 16px;
     background-color: var(--primary);
     padding: 6px 12px;
-    border-bottom: 2px solid transparent;
+    border-bottom: var(--border-empty);
     text-decoration: none;
     cursor: pointer;
 }
 
 .link:hover {
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: var(--border-common);
 }
 
 .link:active {
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: var(--border-common);
 }
 
 .link__active {
-    border-bottom: 2px solid var(--secondary);
+    border-bottom: var(--border-common);
 }

@@ -14,6 +14,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'index.html'),
+        chats: resolve(__dirname, 'src/pages/Chats/chats.html'),
       }
     }
   },
@@ -22,4 +23,9 @@ export default defineConfig({
       partialDirectory: resolve(__dirname, 'src/partials'),
     }),
   ],
+  resolve: {
+    alias: {
+      '@src': 'src/',
+    },
+  },
 });

@@ -5,5 +5,5 @@
     height: fit-content;
     width: fit-content;
     padding: 48px 64px;
-    border: 2px solid var(--secondary);
+    border: var(--border-common);
 }

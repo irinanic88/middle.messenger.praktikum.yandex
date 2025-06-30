@@ -1,0 +1,19 @@
+.chats__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: var(--common-padding);
+}
+
+.chats__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 4px;
+}
+
+.chats__user-name {
+    font-size: 14px;
+    color: var(--tertiary);
+}
