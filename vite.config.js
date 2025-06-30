@@ -23,9 +23,4 @@ export default defineConfig({
       partialDirectory: resolve(__dirname, 'src/partials'),
     }),
   ],
-  resolve: {
-    alias: {
-      '@src': 'src/',
-    },
-  },
 });

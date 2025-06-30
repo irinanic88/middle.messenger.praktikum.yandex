@@ -26,10 +26,14 @@
 
 .main {
     grid-column: 2;
-    grid-row: 1 / span 2;
+    grid-row: 1 / span 3;
     display: grid;
-    grid-template-rows: 1fr 140px;
+    grid-template-rows: 100px 1fr 140px;
     min-height: 0;
+}
+
+.main__header {
+
 }
 
 .main__body {

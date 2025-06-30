@@ -1,13 +1,15 @@
 <li class="contact">
-  <div class="avatar avatar_empty"><p>{{avatar}}</p></div>
+  {{> Avatar src=avatar altText="contact-avatar" classes="avatar__contact"}}
   <div class="contact__body">
-    <div class="contact__info">
-      <h6 class="contact__name">{{name}}</h6>
-      <p class="contact__last-visit">{{time}}</p>
-    </div>
-    <div class="contact__messages">
-      <p class="contact__last-message trim-text">{{message}}</p>
-      <p class="contact__unread-counter">{{count}}</p>
+    <p class="contact__chatName"><span class="contact__title">Chat: </span>{{chatName}}</p>
+    <p class="contact__name"><span class="contact__title">With: </span>{{name}}</p>
+    <p class="contact__userName">@{{userName}}</p>
+    <div class="contact__tags">
+      {{#each tags}}
+        <button class="contact__tag">
+          #{{this}}
+        </button>
+      {{/each}}
     </div>
   </div>
 </li>

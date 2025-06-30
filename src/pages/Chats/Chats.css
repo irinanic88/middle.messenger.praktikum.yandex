@@ -17,3 +17,10 @@
     font-size: 14px;
     color: var(--tertiary);
 }
+
+.chats__search {
+    padding: 12px;
+    display: flex;
+    border-bottom: var(--border-common);
+    gap: 4px;
+}

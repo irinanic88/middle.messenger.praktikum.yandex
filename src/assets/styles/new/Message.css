@@ -1,0 +1,17 @@
+.message {
+    list-style: none;
+    padding: 12px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 70%;
+}
+
+.message__chat-owner {
+    border: var(--border-common);
+}
+
+.message__contact {
+
+}

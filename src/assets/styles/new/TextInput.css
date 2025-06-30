@@ -1,6 +1,7 @@
 @import "./index.css";
 
 .text-input {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 8px;
@@ -23,6 +24,7 @@
 }
 
 .text-input__input {
+    width: 100%;
     padding: 6px 12px;
     border: var(--border-common);
 }

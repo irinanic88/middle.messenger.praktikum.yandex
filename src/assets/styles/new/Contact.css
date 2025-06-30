@@ -1,0 +1,44 @@
+.contact {
+    display: flex;
+    gap: 8px;
+    border-bottom: 2px solid var(--tertiary);
+    padding: 12px 0 12px 12px;
+    font-size: 14px;
+}
+
+.contact__title {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.contact__chat-name,
+.contact__user-name,
+.contact__name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+}
+
+.contact__userName {
+    color: var(--tertiary);
+    font-size: 12px;
+}
+
+.contact__tags {
+    margin-top: 4px;
+    display: flex;
+    gap: 2px;
+}
+
+.contact__tag {
+    border: none;
+    background-color: var(--primary);
+    font-size: 12px;
+    border-bottom: 1px solid transparent;
+}
+
+.contact__tag:hover {
+    border-bottom: 1px solid var(--secondary);
+    cursor: pointer;
+}

@@ -29,4 +29,14 @@
     border-radius: 50%;
 }
 
+.avatar__chat {
+    border: var(--border-common);
+    border-radius: 50%;
+}
+
+.avatar__chat img {
+    width: 80%;
+    height: 80%;
+}
+
 
