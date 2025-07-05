@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
 
-export const userMock = {
+export const userMockRus = {
   id: 'main-user-id',
   avatar: '/icons/cat_icon_1.png',
   name: 'Игорь',
@@ -10,7 +10,17 @@ export const userMock = {
   phone: '+7 (999) 123-45-67',
 };
 
-export const contactsMock = [
+export const userMock = {
+  id: 'main-user-id',
+  avatar: '/icons/cat_icon_1.png',
+  name: 'Paco',
+  surname: 'Risitas',
+  userName: 'paco_risas_007',
+  email: 'paco.risitas@example.com',
+  phone: '+34 612 345 678',
+};
+
+export const contactsMockRus = [
   {
     chatId: 'chat-1a2b3c4d-0001',
     avatar: '/icons/cat_icon_2.png',
@@ -77,9 +87,109 @@ export const contactsMock = [
   }
 ];
 
+export const contactsMock = [
+  {
+    chatId: 'chat-es-0001',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Genios de la productividad',
+    name: 'Miguel Responsable',
+    userName: 'trabajo_miguel',
+    tags: ['trabajo', 'pesado'],
+  },
+  {
+    chatId: 'chat-es-0002',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Memólogos analíticos',
+    name: 'Ana MeParto',
+    userName: 'memes_ana',
+    tags: ['reírse'],
+  },
+  {
+    chatId: 'chat-es-0003',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Telenovela familiar',
+    name: 'Tía Carmen',
+    userName: 'tia_carmen',
+    tags: ['familia', 'opiniones'],
+  },
+  {
+    chatId: 'chat-es-0004',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Citas y croissants',
+    name: 'Sergio Romántico',
+    userName: 'tinder_sergio',
+    tags: ['tinder', 'reírse'],
+  },
+  {
+    chatId: 'chat-es-0005',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Informe de vuelo',
+    name: 'Vlad el Pesado',
+    userName: 'vlad_aburre',
+    tags: ['pesado', 'trabajo'],
+  },
+  {
+    chatId: 'chat-es-0006',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: '¿Y este quién es?',
+    name: 'Hámster Misterioso',
+    userName: 'hamster_desconocido',
+    tags: ['quién_es'],
+  },
+  {
+    chatId: 'chat-es-0007',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Humor del 2007',
+    name: 'Chusco Slavo',
+    userName: 'slavo_memes',
+    tags: ['reírse', 'familia', 'tinder'],
+  },
+  {
+    chatId: 'chat-es-0008',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Gatitos y entregas',
+    name: 'Cata TodoListo',
+    userName: 'cata_apura',
+    tags: ['trabajo', 'familia'],
+  },
+  {
+    chatId: 'chat-es-0009',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Discusión infinita',
+    name: 'José El Pesado',
+    userName: 'jose_blabla',
+    tags: ['pesado', 'opiniones'],
+  },
+  {
+    chatId: 'chat-es-0010',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Dramáticos pero simpáticos',
+    name: 'Lucía QuéDrama',
+    userName: 'lucia_teatro',
+    tags: ['opiniones', 'familia', 'reírse'],
+  },
+  {
+    chatId: 'chat-es-0011',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Control total',
+    name: 'Doña CheckList',
+    userName: 'control_freak',
+    tags: ['trabajo'],
+  },
+  {
+    chatId: 'chat-es-0012',
+    avatar: '/icons/cat_icon_2.png',
+    chatName: 'Stickerlandia',
+    name: 'Carlos Sticker',
+    userName: 'emoji_rey',
+    tags: ['reírse', 'familia'],
+  }
+];
+
+
 
 export function generateMessages(contact: { chatId: string }) {
-  const messages = [
+  const messagesRus = [
     {
       messageId: uuid(),
       chatId: contact.chatId,
@@ -221,6 +331,151 @@ export function generateMessages(contact: { chatId: string }) {
       text: "Договорились! Приглашай всех пушистиков.",
     },
   ];
+
+  const messages = [
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "¡Hola! ¿Sabías que los gatos controlan el internet en secreto?",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Obvio, tengo un escuadrón de gatos espías en casa.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "Imagínate si imponen reglas: ¡Dormir 18 horas al día obligatorio!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Y caricias ilimitadas a cualquier hora, por supuesto.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "Vivimos en la dictadura felina y nadie lo nota.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "¿Viste cómo te miran? Como si supieran tus secretos más profundos.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "A veces creo que entienden mejor que los humanos.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Quizás deberíamos empezar a aprender su idioma... miau.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "¿Y si graban nuestras conversaciones para chantajearnos luego?",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Confesión: no me gusta el brócoli. ¡No se lo digas a nadie!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "Tranquilo, tu secreto está a salvo conmigo. Y con los gatos.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Lo importante es que todos hablamos el idioma felino.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "Tenemos que invitarlos a tomar té... o leche.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Pero con snacks gourmet. Los gatos tienen paladar fino.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "¡Galletas de ratón! Eso sí que sería un manjar.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "¡El próximo hit culinario del año!",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "Solo asegúrate de apagar el puntero láser antes de dormir.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "Batalla láser nocturna: el clásico preferido.",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: userMock.id,
+      avatar: '/icons/cat_icon_1.png',
+      text: "Entonces... ¿hacemos una fiesta felina?",
+    },
+    {
+      messageId: uuid(),
+      chatId: contact.chatId,
+      senderId: contact.chatId,
+      avatar: '/icons/cat_icon_2.png',
+      text: "¡Hecho! Invita a todos los peluditos.",
+    },
+  ];
+
+
 
   return messages;
 }

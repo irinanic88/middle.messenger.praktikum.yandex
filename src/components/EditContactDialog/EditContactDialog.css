@@ -1,0 +1,32 @@
+.edit-contact-dialog__container {
+    position: relative;
+    width: 430px;
+    height: 500px;
+    background-color: var(--primary);
+    padding: 50px 24px 30px;
+    border: var(--border-common);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.edit-contact-dialog__form .text-input {
+    justify-content: flex-start;
+}
+
+.edit-contact-dialog_action-btn {
+    align-self: flex-end;
+}
+
+.edit-contact-dialog__tags-label {
+    margin-top: 24px;
+    align-self: flex-start;
+}
+
+.edit-contact-dialog__avatars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}

@@ -1,11 +1,15 @@
 import Handlebars from 'handlebars';
 
-export const eqHelper = (a: any, b: any) => a === b;
-export const notHelper =  (value) => {
+const eqHelper = (a: any, b: any) => a === b;
+const notHelper =  (value) => {
   return !value;
 }
+const orHelper = (a, b) => {
+  return a || b;
+};
 
 export function registerCommonHelpers(hbs: typeof Handlebars) {
   hbs.registerHelper('eq', eqHelper);
   hbs.registerHelper('not', notHelper);
+  hbs.registerHelper('or', orHelper);
 }

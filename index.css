@@ -3,7 +3,8 @@
     --secondary: #000000;
     --tertiary: #9c9c9c;
     --font-primary: #000000;
-    --font-secondary: #D9D9D9;
+    --font-secondary: #d2d1d1;
+    --light-grey: #f5f5f5;
     --border-common: 2px solid var(--secondary);
     --border-empty: 2px solid transparent;
     --common-padding: 16px;

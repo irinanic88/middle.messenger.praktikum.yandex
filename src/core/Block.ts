@@ -56,6 +56,7 @@ abstract class Block<P extends Record<string, any> = {}> {
 
   private _componentDidMount(): void {
     this.componentDidMount();
+    console.log('I am mounting now in Block');
 
     Object.values(this.children).forEach(child => {
       child.dispatchComponentDidMount();
@@ -70,6 +71,7 @@ abstract class Block<P extends Record<string, any> = {}> {
 
   private _componentDidUpdate(oldProps: P, newProps: P): void {
     const response = this.componentDidUpdate(oldProps, newProps);
+    console.log('I am updating now in Block');
 
     if(response) {
       this.eventBus().emit(Block.EVENTS.FLOW_RENDER);

@@ -1,0 +1,31 @@
+.dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.dialog__container {
+    position: relative;
+    width: 700px;
+    height: 450px;
+    background-color: var(--primary);
+    padding: 50px 24px 30px;
+    border: var(--border-common);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.dialog__close-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}

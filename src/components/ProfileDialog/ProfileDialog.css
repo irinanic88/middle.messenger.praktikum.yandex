@@ -1,0 +1,57 @@
+.profile-dialog__profile {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-dialog__form {
+    width: 350px
+}
+
+.profile-dialog__form input {
+    width: 220px
+}
+
+.profile-dialog__action-btn {
+    align-self: flex-end;
+}
+
+.profile-dialog__profile-info {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-dialog__profile-info li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-dialog__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.profile-dialog__edit-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.profile-dialog__edit-avatar {
+    width: 230px;
+    height: 230px;
+    border: var(--border-common);
+    cursor: crosshair;
+}
+
+.profile-dialog__edit-avatar-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}

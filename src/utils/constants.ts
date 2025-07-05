@@ -1,4 +1,5 @@
 import {TabsType} from "../components/Tabs/Tabs.types";
+import {Contact} from "../components/Chat/Chat.types";
 
 export const appTabs: TabsType = {
   signIn: {
@@ -11,4 +12,13 @@ export const appTabs: TabsType = {
     title: 'Sign Up',
     href: '#',
   },
+};
+
+export const emptyContact: Contact = {
+  chatId: '',
+  avatar: '',
+  chatName: '',
+  name: '',
+  userName: '',
+  tags: [],
 };

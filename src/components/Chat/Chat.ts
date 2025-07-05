@@ -1,19 +1,22 @@
 import Block from "../../core/Block";
-
-import '../../assets/styles/new/Grid.css';
+import '../../assets/styles/Grid.css';
 import './Chat.css';
-import '../../assets/styles/new/Avatar.css';
+import '../../assets/styles/Avatar.css';
 import Handlebars from 'handlebars';
 import AvatarTemplate from '../../partials/Avatar.hbs?raw';
 import MessageTemplate from '../../partials/Message.hbs?raw';
-import ButtonTemplate from '../../partials/Button.hbs?raw';
+import ButtonTemplate from '../Button/Button.hbs?raw';
 
-import '../../assets/styles/new/Avatar.css';
-import '../../assets/styles/new/Message.css';
-import '../../assets/styles/new/Button.css';
-import '../../assets/styles/new/CurrentMessage.css';
+import '../../assets/styles/Avatar.css';
+import '../../assets/styles/Message.css';
+import '../Button/Button.css';
+import '../../assets/styles/CurrentMessage.css';
 
 import {contactsMock, generateMessages} from "../../../mocks";
+import {ChatPropsType, Contact} from "./Chat.types";
+import {Button} from "../Button/Button";
+import {EditContactDialog} from "../EditContactDialog/EditContactDialog";
+import {emptyContact} from "../../utils/constants";
 
 Handlebars.registerPartial('Avatar', AvatarTemplate);
 Handlebars.registerPartial('Message', MessageTemplate);
@@ -31,7 +34,7 @@ const template = `
         {{/each}}
         </div>
       </div>
-      {{> Button icon="/icons/edit_icon.png" }}
+      {{{EditContactButton}}}
     </header>      
       
     <div class="main__body">
@@ -59,22 +62,22 @@ const template = `
           placeholder="Type your message here"
           ></textarea>
         </label>
-        {{> Button title="Send" }}
+        {{{SentMessageButton}}}
       </form>
+      
+      {{#if showEditContactDialog}}
+        {{{EditContactDialog}}}
+      {{/if}}
     </main>
 `;
 
-const getContactById = (id, contacts) => {
+const getContactById = (id: string, contacts: Contact[]): Contact | {name:string; chatName: string; tags: []} => {
   const contact = contacts.find(c => c.chatId === id);
 
-  return contact || {
-    name: '',
-    chatName: '',
-    tags: [],
-  }
+  return contact || emptyContact;
 }
 
-export class Chat extends Block {
+export class Chat extends Block<ChatPropsType> {
   constructor(props) {
     const {name: contactName, chatName, tags} = getContactById(props.contactId, contactsMock);
 
@@ -86,11 +89,29 @@ export class Chat extends Block {
       contactName,
       chatName,
       tags,
+      showEditContactDialog: false,
+      EditContactButton: new Button({
+        icon: "/icons/edit_icon.png",
+        onClick: () => this.handleShowEditContactDialog(true)
+
+      }),
+      SendMessageButton: new Button({
+        title: "Send",
+      }),
+      EditContactDialog: new EditContactDialog({
+        closeDialog: () => this.handleShowEditContactDialog(false),
+        contactId: props.contactId,
+        user: props.user,
+      })
     });
   }
 
   render(): string {
     return template;
+  }
+
+  handleShowEditContactDialog(v: boolean) {
+    this.setProps({showEditContactDialog: v});
   }
 }
 

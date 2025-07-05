@@ -28,7 +28,7 @@
 }
 
 .text-input__input:not(:placeholder-shown) {
-    border: var(--border-empty);
+    border: 2px solid var(--light-grey);
 }
 
 .text-input__input:focus {
