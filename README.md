@@ -1,57 +1,42 @@
-# my_chat
+# miau_chat
 
 Личный учебный проект мессенджера в браузере, в рамках курса "Мидл фронтенд-разработчик" от [Яндекс.Практикум](https://practicum.yandex.ru/middle-frontend/)
+На данный момент разработан весь интерфейс, формы интерактивны, и у обязательных полей есть валидация, данные из форм выводятся в консоли.
+Для каждого контакта у юзера есть возможность добавить таги, по которым можно будет фильтровать список контактов (или через Search).
+Так же у юзера есть общая функциональность с каждым контактом - возможность назвать чат.
 
-___ 
+Последняя версия на Netlify:
+https://deploy-preview-2--majestic-cupcake-66b169.netlify.app/
+---
 
 ## Технологии
 
-- HTML / CSS
+- HTML / CSS / Typescript
 - Vite
-- PostCss / Handlebars
+- ESLint / Stylelint / PostCss / Handlebars
 
-___
-
-## Дизайн
-
-Здесь можно посмотреть на полный дизайн макетов в [Figma](https://www.figma.com/design/jF5fFFzgGOxQeB4CmKWTiE/Chat_external_link?node-id=0-1)
-
-___
+---
 
 ## Установка и запуск
-``` 
+
+```
 git clone https://github.com/irinanic88/middle.messenger.praktikum.yandex.git
-cd my_chat
+cd miau_chat
 npm install
 ```
 
 #### Для разработки используется команда
-``` 
+
+```
 npm run dev
 ```
 
 #### Чтобы собрать и запустить проект
-``` 
+
+```
 npm run start
 ```
 
-#### На данный момент доступны следующие страницы по данным ссылкам
+#### На 3000 порте можно запустить проект, страницы открываются интерактивно
 
 http://localhost:3000
-
-http://localhost:3000/src/pages/SignIn/sign-in.html
-http://localhost:3000/src/pages/SignUp/sign-up.html
-http://localhost:3000/src/layout/Chats/chats.html
-http://localhost:3000/src/layout/Profile/profile.html
-http://localhost:3000/src/layout/EditProfile/edit-profile.html
-http://localhost:3000/src/layout/CurrentChat/current-chat.html
-http://localhost:3000/src/dialogs/ChangePasswordDialog/change-password-dialog.html
-http://localhost:3000/src/dialogs/DeleteProfileDialog/delete-profile-dialog.html
-http://localhost:3000/src/error-pages/PageNotFound/page-not-found.html
-http://localhost:3000/src/error-pages/ServerError/server-error.html
-
-__
-
-## Деплой
-
-Ссылка Netlify: https://majestic-cupcake-66b169.netlify.app/

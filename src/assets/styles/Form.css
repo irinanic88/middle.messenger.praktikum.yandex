@@ -1,0 +1,26 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--common-padding);
+}
+
+.form__inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 16px;
+}
+
+.form__actions {
+  display: flex;
+  gap: 24px;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
