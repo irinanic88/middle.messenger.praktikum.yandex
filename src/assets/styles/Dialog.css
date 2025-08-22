@@ -1,0 +1,36 @@
+.dialog {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--transparent-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.dialog__container {
+  position: relative;
+  min-width: 700px;
+  background-color: var(--primary);
+  padding: 50px 24px 30px;
+  border: var(--border-common);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.dialog__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}

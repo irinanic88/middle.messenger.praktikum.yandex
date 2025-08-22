@@ -1,0 +1,153 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false
+    },
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "import", "sort-keys-fix"],
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true
+  },
+  "rules": {
+    "indent": ["error", 2],
+    "no-trailing-spaces": "error",
+    "eol-last": ["error", "always"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" },
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/*.test.ts", "**/*.spec.ts", "scripts/**", "vite.config.js"]
+      }
+    ],
+    "import/no-unresolved": [
+      "error",
+      {
+        "ignore": ["\\.hbs\\?raw$"]
+      }
+    ],
+    "class-methods-use-this": "off",
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "import/prefer-default-export": "off",
+    "no-use-before-define": ["error", { "classes": false }],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "no-param-reassign": ["error", { "props": false }],
+    "prefer-arrow-callback": "off",
+    "func-names": "off",
+    "no-console": "off",
+    "camelcase": "off",
+    "import/order": [
+        "error",
+        {
+          "groups": [
+            "builtin",
+            "external",
+            "internal",
+            ["parent", "sibling", "index"],
+            "type",
+            "unknown"
+          ],
+          "pathGroups": [
+            {
+              "pattern": "*/core/**",
+              "group": "internal",
+              "position": "before"
+            },
+            {
+              "pattern": "*/components/**",
+              "group": "internal",
+              "position": "before"
+            },
+            {
+              "pattern": "*/constants/**",
+              "group": "internal",
+              "position": "before"
+            },
+            {
+              "pattern": "*/helpers/**",
+              "group": "internal",
+              "position": "before"
+            },
+            {
+              "pattern": "*/types/**",
+              "group": "type",
+              "position": "after"
+            },
+            {
+              "pattern": "**/*.css",
+              "group": "unknown",
+              "position": "after"
+            },
+            {
+              "pattern": "**/*.scss",
+              "group": "unknown",
+              "position": "after"
+            }
+          ],
+          "pathGroupsExcludedImportTypes": ["builtin"],
+          "newlines-between": "always",
+          "alphabetize": {
+            "order": "asc",
+            "caseInsensitive": true
+          }
+        }
+      ],
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "varsIgnorePattern": "^_" }
+    ],
+    "no-unused-vars": "off",
+    "no-inline-comments": "error",
+    "function-paren-newline": ["error", "multiline-arguments"]
+
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".json", ".hbs"]
+      }
+    }
+  },
+  "overrides": [
+    {
+      "files": ["vite.config.js"],
+      "parserOptions": {
+        "project": null
+      },
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "import/no-unresolved": "off"
+      }
+    }
+  ]
+}

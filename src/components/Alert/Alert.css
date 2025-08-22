@@ -1,0 +1,31 @@
+.alert {
+    height: auto;
+    width: 350px;
+    min-height: 100px;
+    padding: 10px 10px 10px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--primary);
+    border: var(--border-common);
+}
+
+.alert * {
+    font-size: 12px;
+}
+
+.alert__message {
+    color: var(--red);
+    font-weight: 600;
+}
+
+.alert__fields {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.alert__field-name {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
