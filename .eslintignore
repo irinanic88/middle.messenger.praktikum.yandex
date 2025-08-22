@@ -1,0 +1,6 @@
+/build
+/public
+**/*.min.js
+/node_modules
+postcss.config.js
+vite.config.js

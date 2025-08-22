@@ -1,62 +1,40 @@
 :root {
-    --primary: #3369F3;
-    --secondary: #A2BAF7;
-    --font-primary: #000000;
-    --font-secondary: #DADCE0;
-    --font-tertiary: #FFFFFF;
-    --font-messages: #8E8E92;
-    --light-grey: #D9D9D9;
+  --primary: #fff;
+  --secondary: #000;
+  --tertiary: #9c9c9c;
+  --font-primary: #000;
+  --font-secondary: #d2d1d1;
+  --light-grey: #f5f5f5;
+  --dark-grey: #374151;
+  --light-blue: #ECF3FC;
+  --red: #FD8171FF;
+  --transparent-bg: rgb(0 0 0 / 10%);
+  --border-common: 2px solid var(--secondary);
+  --border-empty: 2px solid transparent;
+  --common-padding: 16px;
 }
 
-
-html, body, h1, h2, h3, h4, h5, h6, p, div, span, * {
-    font-family: "DM Sans", "Roboto Light", sans-serif;
-    padding: 0;
-    margin: 0;
-}
-
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: var(--font-primary);
-}
-
-.main__links {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    list-style: none;
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+* {
+  font-family: 'DM Sans', 'Roboto Light', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 14px;
 }
 
 .trim-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.icon-placeholder {
-    width: 24px;
-    height: 24px;
-    background-color: var(--primary);
-}
-
-.icon-placeholder_selected {
-    background-color: var(--font-tertiary);
-}
-
-.title {
-    font-size: 16px;
-    font-weight: 600;
-}
-
-.auth {
-    margin-top: 48px;
-    align-self: center;
-}
-
-.auth__link {
-    text-transform: uppercase;
-    color: var(--font-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

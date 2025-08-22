@@ -1,26 +1,22 @@
 {
-  "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "postcss-nested": "^7.0.2",
-    "vite": "^6.2.6"
-  },
-  "dependencies": {
-    "vite-plugin-handlebars": "^2.0.0"
-  },
   "name": "my_chat",
-  "description": "",
   "version": "1.0.0",
+  "description": "",
   "main": "vite.config.js",
+  "type": "module",
   "scripts": {
     "start": "vite build && vite preview",
     "build": "vite build",
     "dev": "vite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx && tsc --noEmit",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "stylelint": "stylelint '**/*.css'",
+    "stylelint:fix": "stylelint '**/*.css' --fix"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/irinanic88/middle.messenger.praktikum.yandex.git"
+    "url": "https://github.com/irinanic88/middle.messenger.praktikum.yandex.git"
   },
   "keywords": [],
   "author": "Irina Nicolai",
@@ -29,8 +25,35 @@
     "url": "https://github.com/irinanic88/middle.messenger.praktikum.yandex/issues"
   },
   "homepage": "https://github.com/irinanic88/middle.messenger.praktikum.yandex#readme",
-  "type": "module",
   "engines": {
     "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "handlebars": "^4.7.8",
+    "i": "^0.3.7",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.39.1",
+    "@typescript-eslint/parser": "^8.39.1",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.57.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.2",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^4.2.5",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "postcss": "^8.5.3",
+    "postcss-nested": "^7.0.2",
+    "prettier": "^2.8.8",
+    "prettier-plugin-handlebars": "^0.0.1",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6",
+    "vite-plugin-handlebars": "^2.0.0"
   }
 }

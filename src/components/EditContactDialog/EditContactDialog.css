@@ -1,0 +1,23 @@
+.edit-contact-dialog__container {
+  position: relative;
+  width: 430px;
+  background-color: var(--primary);
+  padding: 50px 24px 30px;
+  border: var(--border-common);
+}
+
+.edit-contact-dialog__body {
+  border: var(--border-common);
+  padding: var(--common-padding);
+  background-color: var(--light-blue);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.edit-contact-dialog__avatars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}

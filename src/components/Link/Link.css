@@ -1,0 +1,21 @@
+.link {
+  color: var(--secondary);
+  text-transform: uppercase;
+  background-color: var(--primary);
+  padding: 6px 12px;
+  border-bottom: var(--border-empty);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover {
+  border-bottom: var(--border-common);
+}
+
+.link:active {
+  border-bottom: var(--border-common);
+}
+
+.link__active {
+  border-bottom: var(--border-common);
+}
